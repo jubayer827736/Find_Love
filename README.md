@@ -1,143 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LocalMeet</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভিডিও প্রিভিউ + Ads</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+  }
 
-    header {
-      background: #ff5b5b;
-      color: white;
-      padding: 10px 20px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+  .container {
+    max-width: 600px;
+    width: 100%;
+  }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
+  .ad-top, .ad-inline, .ad-bottom {
+    margin: 20px 0;
+    text-align: center;
+  }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+  .video-card {
+    background: linear-gradient(135deg, #e9f7ef, #d0f0d6);
+    border: 2px solid #34a853;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+  .video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  }
 
-    .btn-main {
-      background: #ff5b5b;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 18px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+  .video-card h2 {
+    color: #1b5e20;
+    font-size: 26px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
 
-    .btn-main:hover {
-      background: #e14e4e;
-    }
+  .video-card p {
+    font-size: 16px;
+    color: #1c1c1c;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
 
-    section {
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
+  .video-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
 
-    .user {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    }
+  .video-card img:hover {
+    transform: scale(1.02);
+  }
 
-    .user img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 15px;
-    }
+  .watch-btn {
+    display: inline-block;
+    margin: 20px 0 10px;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
 
-    .user-info h3 {
-      margin: 0;
-      font-size: 18px;
-    }
+  .watch-btn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-3px);
+  }
 
-    .online {
-      color: green;
-      font-size: 14px;
-      margin-left: 6px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fff;
-    }
-  </style>
+  .video-card small {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #444;
+  }
+</style>
 </head>
 <body>
-  <header>❤️ LocalMeet</header>
 
-  <div class="hero">
-    <h1>Your World. Your Match. Meet Tonight.</h1>
-    <p>Fast sign-up. Real profiles. Chat instantly with local people — no credit card required.</p>
-    <a href="https://ddebcdd.posttoffer.com/c/cd2a02d85055b?sub1=ads" class="btn-main">Join Free Today</a>
+<div class="container">
+
+  <!-- Top Banner Ad -->
+  <div class="ad-top">
+    <script type="text/javascript">  
+      atOptions = { 
+        'key' : 'e8ca12b4e5c596c3fd6e3fe8924500ed', 
+        'format' : 'iframe', 
+        'height' : 60, 
+        'width' : 468, 
+        'params' : {} 
+      }; 
+    </script> 
+    <script type="text/javascript" src="//www.highperformanceformat.com/e8ca12b4e5c596c3fd6e3fe8924500ed/invoke.js"></script>
   </div>
 
-  <section>
-    <h2>5342 People online right now</h2>
+  <div class="video-card">
+    <h2>😳 ক্যামেরায় ধরা পড়ল যা কেউ আশা করেনি!</h2>
+    <p>বাংলাদেশের ৫০০+ ভাইরাল ভিডিও পাবেন আমাদের কাছে</p>
 
-    <div class="user">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maya">
-      <div class="user-info">
-        <h3>Maya <span class="online">● 26</span></h3>
-        <p>Los Angeles, CA</p>
-      </div>
+    <img src="https://i.ibb.co/Pzb2x46C/20250817-001752.jpg" alt="Thumbnail">
+
+    <a href="https://www.effectivegatecpm.com/tz7ds6mf3?key=a7471400876807a0b6e5410c9c4ee576" target="_blank" class="watch-btn">
+      ▶ ভিডিও দেখুন
+    </a>
+
+    <small>👉 ভিডিও চালু করতে উপরের <b>"ভিডিও দেখুন"</b> বাটনে ক্লিক করুন। (18+ Content)</small>
+
+    <!-- Inline Social Ads -->
+    <div class="ad-inline">
+      <script type='text/javascript' src='//pl27905725.effectivegatecpm.com/7c/41/26/7c4126d98529a0fb5556d5ac10e6a21e.js'></script>
     </div>
 
-    <div class="user">
-      <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Chris">
-      <div class="user-info">
-        <h3>Chris <span class="online">● 30</span></h3>
-        <p>New York, NY</p>
-      </div>
+    <!-- Inline Native Banner -->
+    <div class="ad-inline" style="margin-top: 15px;">
+      <script async="async" data-cfasync="false" src="//pl27905779.effectivegatecpm.com/929a02e5d4d5d114fedb308d2772cc46/invoke.js"></script>
+      <div id="container-929a02e5d4d5d114fedb308d2772cc46"></div>
     </div>
+  </div>
 
-    <div class="user">
-      <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Sofia">
-      <div class="user-info">
-        <h3>Sofia <span class="online">● 25</span></h3>
-        <p>Miami, FL</p>
-      </div>
-    </div>
-  </section>
+  <!-- Bottom Banner Ad -->
+  <div class="ad-bottom">
+    <script type="text/javascript">  
+      atOptions = { 
+        'key' : 'e8ca12b4e5c596c3fd6e3fe8924500ed', 
+        'format' : 'iframe', 
+        'height' : 60, 
+        'width' : 468, 
+        'params' : {} 
+      }; 
+    </script> 
+    <script type="text/javascript" src="//www.highperformanceformat.com/e8ca12b4e5c596c3fd6e3fe8924500ed/invoke.js"></script>
+  </div>
 
-  <footer>
-    <h3>Ready to meet someone tonight?</h3>
-    <p>Tap below to join — it’s totally free.</p>
-    <a href="https://ddebcdd.posttoffer.com/c/cd2a02d85055b?sub1=ads" class="btn-main">Join Free Today</a>
-  </footer>
+</div>
+
 </body>
 </html>
