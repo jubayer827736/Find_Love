@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ভিডিও প্রিভিউ + Ads</title>
+<title>ভাইরাল ভিডিও লিংক </title>
 <style>
   body {
     font-family: 'Segoe UI', sans-serif;
@@ -65,7 +65,7 @@
   }
 
   .watch-btn {
-    display: inline-block;
+    display: none; /* প্রথমে লুকানো */
     margin: 20px 0 10px;
     background-color: #2e7d32;
     color: #fff;
@@ -74,12 +74,19 @@
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s ease;
   }
 
-  .watch-btn:hover {
-    background-color: #1b5e20;
-    transform: translateY(-3px);
+  .watch-btn.show {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  .timer-text {
+    font-size: 15px;
+    color: #444;
+    margin-top: 10px;
   }
 
   .video-card small {
@@ -109,14 +116,18 @@
   </div>
 
   <div class="video-card">
-    <h2>😳 বাংলাদেশ এবং ইন্ডিয়ার সব ভাইরাল সেলিব্রিটিদের ভিডিও </h2>
-    <p>বাংলাদেশের+ইন্ডিয়া  ৫০০+ ভাইরাল ভিডিও পাবেন আমাদের কাছে</p>
+    <h2>😳 ক্যামেরায় ধরা পড়ল যা কেউ আশা করেনি!</h2>
+    <p>বাংলাদেশের ৫০০+ ভাইরাল ভিডিও পাবেন আমাদের কাছে</p>
 
     <img src="https://i.ibb.co/Pzb2x46C/20250817-001752.jpg" alt="Thumbnail">
 
-    <a href="https://www.effectivegatecpm.com/tz7ds6mf3?key=a7471400876807a0b6e5410c9c4ee576" target="_blank" class="watch-btn">
+    <!-- CTA Button -->
+    <a id="ctaButton" href="https://www.effectivegatecpm.com/tz7ds6mf3?key=a7471400876807a0b6e5410c9c4ee576" target="_blank" class="watch-btn">
       ▶ ভিডিও দেখুন
     </a>
+
+    <!-- Timer text -->
+    <div id="timer" class="timer-text">অনুগ্রহ করে <b>১৫</b> সেকেন্ড অপেক্ষা করুন...</div>
 
     <small>👉 ভিডিও চালু করতে উপরের <b>"ভিডিও দেখুন"</b> বাটনে ক্লিক করুন। (18+ Content)</small>
 
@@ -147,6 +158,23 @@
   </div>
 
 </div>
+
+<script>
+  let seconds = 15;
+  const timerText = document.getElementById('timer');
+  const ctaButton = document.getElementById('ctaButton');
+
+  const countdown = setInterval(() => {
+    seconds--;
+    timerText.innerHTML = `অনুগ্রহ করে <b>${seconds}</b> সেকেন্ড অপেক্ষা করুন...`;
+
+    if (seconds <= 0) {
+      clearInterval(countdown);
+      timerText.innerHTML = "✅ এখন আপনি ভিডিও দেখতে পারবেন!";
+      ctaButton.classList.add('show');
+    }
+  }, 1000);
+</script>
 
 </body>
 </html>
